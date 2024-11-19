@@ -1,8 +1,8 @@
-# NuAegis: Earnings Call Transcripts Summarization, Sentiment Analysis, and Conversational AI Integration
+# NuAegis: Earnings Call Transcripts Summarization, Sentiment Analysis and Conversational AI Integration
 
 ## Project Overview
 
-This project leverages Natural Language Processing (NLP) techniques to analyze Earnings Call Transcripts (ECTs). It performs tasks such as summarization, sentiment-based summarization, and interactive Q&A through a chatbot. The final solution is implemented as an Android application, NuAegis, aimed at providing users with concise, actionable insights on financial reports.
+This project establishes the use of Natural Language Processing techniques to analyze Earnings Call Transcripts (ECTs). It performs tasks such as summarization, sentiment-based summarization and interactive Q&A using a chatbot. The final solution is implemented as an Android application, NuAegis, aimed at providing users with concise insights on financial reports.
 
 ## Table of Contents
 1. [Objectives](#objectives)
@@ -22,28 +22,28 @@ This project leverages Natural Language Processing (NLP) techniques to analyze E
 
 - Provide users with a summarized version of extensive earnings call transcripts.
 - Generate sentiment-based summaries, offering both positive and negative viewpoints.
-- Develop a chatbot for interactive financial Q&A, allowing personalized inquiries.
+- Develop a chatbot for interactive financial Q&A which allows personalized inquiries.
 
 ## Dataset
 
-This project uses ECTs from the top 50 companies, scraped from AlphaSpread and organized by company, year, and quarter. Each transcript provides information about key financial metrics, enabling analysis across various time frames.
+This project uses ECTs from the top 50 companies, scraped from AlphaSpread (www.alphaspread.com) and organized by company, year and quarter. Each transcript provides information about key financial metrics enabling analysis across various time frames.
 
 ## Methodology
 
 ### Data Collection
 
-- ECTs were scraped using BeautifulSoup and Requests libraries, cleaned, and stored as text files organized by company, year, and quarter.
+- ECTs were scraped using BeautifulSoup and Requests libraries, subsequently cleaned and stored as text files organized by respective company, year and quarter.
 - Standard preprocessing techniques (tokenization, lowercasing) were applied to the text.
 
 ### Summarization
 
 - The BART transformer model was used for summarization, handling large transcripts by splitting them into manageable chunks.
-- Generated summaries capture critical financial metrics, strategies, and market sentiments for each earnings call.
+- Generated summaries capture critical financial metrics, strategies and market sentiments for each earnings call.
 
 ### Sentiment-based Summarization
 
 1. **Sentiment Analysis**: Using a BiLSTM model with GloVe 100-d embeddings and multi-head attention mechanism, the model achieved 90% accuracy on the Financial Phrasebank dataset.
-2. **Concise Summarization**: Leveraging the T5 model fine-tuned on the ECTSum dataset, the model generates sentiment-based summaries, classified as positive or negative with a context window of three sentences.
+2. **Concise Summarization**: Utilizing the T5 model fine-tuned on the ECTSum dataset, the model generates sentiment-based summaries, classified as positive or negative with a context window of three sentences.
 
 ### Conversational AI (Chatbot)
 
@@ -58,5 +58,4 @@ This project uses ECTs from the top 50 companies, scraped from AlphaSpread and o
 
 ## User Interface
 
-The mobile application, NuAegis, includes separate pages for summarization, sentiment-based summaries, and chatbot interaction, allowing investors quick access to financial insights.
-
+NuAegis - A Financial Advisor app summarizes ECTs calls, analyses the sentiment of the transcripts and presents them also in a summary and has a chatbot to discuss details about a particular company's ECT or compare companies performance.
